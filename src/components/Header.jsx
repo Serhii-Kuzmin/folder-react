@@ -1,7 +1,9 @@
-export const Header = (props) => {
+export const Header = ({ title }) => {
+  // console.log(props)
   return (
     <header>
-      <h1>{props.title}</h1>
+      <h1>{title}</h1>
+      <hr />
     </header>
   );
 };

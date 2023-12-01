@@ -1,13 +1,13 @@
 import React from "react";
 
-export const Section = (props) => {
+export const Section = ({ sectionTitle = "Section", data = [] }) => {
   return (
     <section>
-      <h2>{props.sectionsTitle}</h2>
+      <h2>{sectionTitle}</h2>
       <ol>
-        <li>{props.data[0].title}</li>
-        <li>{props.data[1].title}</li>
-        <li>{props.data[2].title}</li>
+        {data.map((item) => (
+          <li key={item.id}>{item.title}</li>
+        ))}
       </ol>
     </section>
   );
