@@ -1,7 +1,15 @@
-export const Header = (props) => {
+import PropTypes from "prop-types";
+
+export const Header = ({ title }) => {
   return (
     <header>
-      <h1>{props.title}</h1>
+      <h1>{title}</h1>
+      <hr />
+      {isLogin && <h2>Welcome back</h2>}
     </header>
   );
+};
+
+Header.propTypes = {
+  title: PropTypes.string,
 };
